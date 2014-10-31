@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>edu.asu.uto.test-mule-app</groupId>
+    <groupId>edu.asu.uto.test_mule_app</groupId>
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>

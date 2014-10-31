@@ -5,7 +5,7 @@
  * license, a copy of which has been included with this distribution in the
  * LICENSE.txt file.
  */
-package edu.asu.uto.test-mule-app.testmuleapp;
+package edu.asu.uto.test_mule_app.testmuleapp;
 
 import org.mule.api.MuleMessage;
 import org.mule.api.client.MuleClient;

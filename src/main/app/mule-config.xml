@@ -26,12 +26,10 @@
     Test Mule App
     </description>
 
-    <flow name="main">
-        <vm:inbound-endpoint path="in" exchange-pattern="request-response"/>
+<flow name="exampleFlow1">
+    <http:inbound-endpoint exchange-pattern="request-response" host="localhost"
+port="8081" />
+    <set-payload value="Hello ASU!"/>
+</flow>
 
-        <!-- TODO add your service component here. This can also be a Spring bean using <spring-object bean="name"/> -->
-        <echo-component/>
-
-        <vm:outbound-endpoint path="out"/>
-    </flow>
 </mule>

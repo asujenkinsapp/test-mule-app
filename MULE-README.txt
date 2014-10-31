@@ -32,7 +32,7 @@ TESTING
 This  project also contains test classes that can be run as part of a test suite.
 
 -----------------------------------------------------------------
-./src/test/java/edu/asu/uto/test-mule-app/testmuleapp/TestmuleappTestCase.java
+./src/test/java/edu/asu/uto/test_mule_app/testmuleapp/TestmuleappTestCase.java
 
 This is an example functional test case.  The test will work as is, but you
 need to configure it to actually test your code.  For more information about
@@ -74,6 +74,6 @@ transports=http,vm
 modules=client,cxf,management,scripting,sxc,xml
 
 version=1.0-SNAPSHOT
-groupId=edu.asu.uto.test-mule-app
+groupId=edu.asu.uto.test_mule_app
 basedir=/home/jldefer/maven
 --------------------------------------------------------------------
