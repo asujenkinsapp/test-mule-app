@@ -323,6 +323,13 @@
             <url>http://dist.codehaus.org/mule/dependencies/maven2</url>
             <layout>default</layout>
         </repository>
+
+        <repository>
+            <id>repo</id>
+            <name>ASU Repository</name>
+            <url>https://artifactory-dev.asu.edu/artifactory/repo</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
 
 </project>
