@@ -8,7 +8,7 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <description>Test Mule App</description>
 
     <properties>
@@ -32,6 +32,7 @@
         -->
         <pluginManagement>
             <plugins>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
@@ -40,6 +41,19 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+             <groupId>com.github.nicholasastuart</groupId>
+              <artifactId>mule-mmc-rest-plugin</artifactId>
+              <version>1.2.2-SNAPSHOT</version>
+              <configuration>
+                <name>Testmuleapp</name>
+                <version>1.0.1-SNAPSHOT</version>
+                <username>deploy</username>
+                <password>${mmc-password}</password>
+                <muleApiUrl>https://webapp4.asu.edu/mulemmc/api</muleApiUrl>
+                <serverGroup>Development</serverGroup>
+              </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.mule.tools</groupId>
                 <artifactId>maven-mule-plugin</artifactId>
@@ -310,4 +324,5 @@
             <layout>default</layout>
         </repository>
     </repositories>
+
 </project>
