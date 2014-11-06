@@ -48,8 +48,8 @@
               <configuration>
                 <name>Testmuleapp</name>
                 <version>1.0.3-SNAPSHOT</version>
-                <username>${mmc-username}</username>
-                <password>${mmc-password}</password>
+                <username>${mmcusername}</username>
+                <password>${mmcpassword}</password>
                 <muleApiUrl>https://webapp4.asu.edu/mulemmc/api</muleApiUrl>
                 <serverGroup>Development</serverGroup>
               </configuration>
