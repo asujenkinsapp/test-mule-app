@@ -8,7 +8,7 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <description>Test Mule App</description>
 
     <properties>
@@ -47,8 +47,8 @@
               <version>1.2.2-SNAPSHOT</version>
               <configuration>
                 <name>Testmuleapp</name>
-                <version>1.0.2-SNAPSHOT</version>
-                <username>deploy</username>
+                <version>1.0.3-SNAPSHOT</version>
+                <username>${mmc-username}</username>
                 <password>${mmc-password}</password>
                 <muleApiUrl>https://webapp4.asu.edu/mulemmc/api</muleApiUrl>
                 <serverGroup>Development</serverGroup>
