@@ -10,6 +10,7 @@
     <name>Mule Testmuleapp Application</name>
     <version>1.0.3-SNAPSHOT</version>
     <description>Test Mule App</description>
+    <url>https://jenkins.asu.edu</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -150,6 +151,16 @@
     <!-- plugins for creating site reports -->
     <reporting>
         <plugins>
+	    <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.8</version>
+	    </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
@@ -177,22 +188,31 @@
                 <version>2.7</version>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>taglist-maven-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <tags>
-                        <tag>TODO</tag>
-                        <tag>@todo</tag>
-                        <tag>FIXME</tag>
-                        <tag>@fixme</tag>
-                        <tag>@deprecated</tag>
-                    </tags>
+		  <tagListOptions>
+		    <tagClasses>
+		      <tagClass>
+			<displayName>Todo Work</displayName>
+			<tags>
+			  <tag>
+			    <matchString>todo</matchString>
+			    <matchType>ignoreCase</matchType>
+			  </tag>
+			  <tag>
+			    <matchString>FIXME</matchString>
+			    <matchType>ignoreCase</matchType>
+			  </tag>
+			  <tag>
+			    <matchString>deprecated</matchString>
+			    <matchType>ignoreCase</matchType>
+			  </tag>
+			</tags>
+		      </tagClass>
+		    </tagClasses>
+		  </tagListOptions>
                 </configuration>
             </plugin>
             <plugin>
