@@ -27,7 +27,7 @@
     </description>
 
 <flow name="exampleFlow1">
-    <http:inbound-endpoint exchange-pattern="request-response" host="localhost"
+    <http:inbound-endpoint exchange-pattern="request-response" host="0.0.0.0"
 port="8081" />
     <set-payload value="Hello ASU!"/>
 </flow>
