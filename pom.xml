@@ -8,7 +8,7 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <description>Test Mule App</description>
     <url>https://jenkins.asu.edu</url>
 
@@ -16,9 +16,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <mule.version>3.5.1</mule.version>
+        <mule.version>3.6.1</mule.version>
         <!-- Tools properties -->
-        <eclipsePluginVersion>2.5</eclipsePluginVersion>
+        <eclipsePluginVersion>2.8</eclipsePluginVersion>
         <vmtype>org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType</vmtype>
         <jdkName>JavaSE-1.6</jdkName>
         <jdk.version>1.6</jdk.version>
@@ -48,32 +48,32 @@
               <version>1.2.2-SNAPSHOT</version>
               <configuration>
                 <name>Testmuleapp</name>
-                <version>1.0.3-SNAPSHOT</version>
+		<version>${project.version}</version>
                 <username>${mmcusername}</username>
                 <password>${mmcpassword}</password>
-                <muleApiUrl>https://webapp4.asu.edu/mulemmc/api</muleApiUrl>
-                <serverGroup>Development</serverGroup>
+		<muleApiUrl>${mmcapiurl}</muleApiUrl>
+		<serverGroup>${mmcservergroup}</serverGroup>
               </configuration>
             </plugin>
             <plugin>
                 <groupId>org.mule.tools</groupId>
                 <artifactId>maven-mule-plugin</artifactId>
-                <version>1.9</version>
+		<version>1.9</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <copyToAppsDirectory>true</copyToAppsDirectory>
+                    <copyToAppsDirectory>false</copyToAppsDirectory>
                 </configuration>
             </plugin>
-            <plugin>
+	    <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.3</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
                     <encoding>ISO-8859-1</encoding>
                 </configuration>
-            </plugin>
+	    </plugin>-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
@@ -89,7 +89,6 @@
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <version>${eclipsePluginVersion}</version>
                 <configuration>
-                    <!-- by default download all sources when generating project files -->
                     <downloadSources>true</downloadSources>
                     <classpathContainers>
                         <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER/${vmtype}/${jdkName}
@@ -104,7 +103,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.0-beta-1</version>
+                <version>1.4</version>
                 <executions>
                     <execution>
                         <phase>install</phase>
@@ -128,7 +127,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.4</version>
+                <version>1.8</version>
                 <executions>
                     <execution>
                         <id>package-example</id>
@@ -230,7 +229,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-		<version>3.0.0</version>
+		<version>3.0.1</version>
             </plugin>
         </plugins>
     </reporting>
@@ -242,7 +241,7 @@
             <artifactId>mule-core</artifactId>
             <version>${mule.version}</version>
             <scope>provided</scope>
-        </dependency>
+	</dependency>
         <!-- Xml configuration -->
         <dependency>
             <groupId>org.mule.modules</groupId>
@@ -284,12 +283,12 @@
             <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+	<!--<dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-scripting</artifactId>
             <version>${mule.version}</version>
             <scope>provided</scope>
-        </dependency>
+	</dependency>-->
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-sxc</artifactId>
@@ -321,23 +320,10 @@
             <version>4.9</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <repositories>
-        <repository>
-            <id>muleforge-repo</id>
-            <name>MuleForge Repository</name>
-            <url>http://repository.muleforge.org</url>
-            <layout>default</layout>
-        </repository>
-
-        <repository>
-            <id>codehaus-repo</id>
-            <name>Codehaus Repository</name>
-            <url>http://dist.codehaus.org/mule/dependencies/maven2</url>
-            <layout>default</layout>
-        </repository>
-
         <repository>
             <id>asu-repo</id>
             <name>ASU Repository</name>
