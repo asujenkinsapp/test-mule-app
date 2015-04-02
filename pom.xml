@@ -47,7 +47,7 @@
               <artifactId>mule-mmc-rest-plugin</artifactId>
               <version>1.2.2-SNAPSHOT</version>
               <configuration>
-                <name>Testmuleapp</name>
+		<name>${project.artifactId}</name>
 		<version>${project.version}</version>
                 <username>${mmcusername}</username>
                 <password>${mmcpassword}</password>
