@@ -43,9 +43,9 @@
         </pluginManagement>
         <plugins>
             <plugin>
-             <groupId>com.github.nicholasastuart</groupId>
+             <groupId>org.mule.tools</groupId>
               <artifactId>mule-mmc-rest-plugin</artifactId>
-              <version>1.2.2-SNAPSHOT</version>
+              <version>1.2.3-SNAPSHOT</version>
               <configuration>
 		<name>${project.artifactId}</name>
 		<version>${project.version}</version>
