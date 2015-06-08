@@ -8,7 +8,7 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>1.0.${build.number}-SNAPSHOT</version>
+    <version>${app.version}</version>
     <description>Test Mule App</description>
     <url>https://jenkins.asu.edu</url>
 
@@ -22,6 +22,7 @@
         <vmtype>org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType</vmtype>
         <jdkName>JavaSE-1.6</jdkName>
         <jdk.version>1.6</jdk.version>
+	<app.version>1.0.${BUILD_NUMBER}-SNAPSHOT</app.version>
     </properties>
 
     <build>
