@@ -8,9 +8,13 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>${app.version}</version>
+    <version>1.0.99-SNAPSHOT</version>
     <description>Test Mule App</description>
     <url>https://jenkins.asu.edu</url>
+
+    <prerequisites>
+        <maven>3.0.1</maven>
+    </prerequisites>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,11 +22,11 @@
 
         <mule.version>3.6.2</mule.version>
         <!-- Tools properties -->
-        <eclipsePluginVersion>2.8</eclipsePluginVersion>
+        <eclipsePluginVersion>2.10</eclipsePluginVersion>
+	<mulemmcrestPluginVersion>1.2.3-SNAPSHOT</mulemmcrestPluginVersion>
         <vmtype>org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType</vmtype>
         <jdkName>JavaSE-1.6</jdkName>
         <jdk.version>1.6</jdk.version>
-	<app.version>1.0.${BUILD_NUMBER}-SNAPSHOT</app.version>
     </properties>
 
     <build>
@@ -38,7 +42,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.3.1</version>
+                    <version>2.5.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -46,6 +50,7 @@
             <plugin>
 	      <groupId>org.mule.tools</groupId>
               <artifactId>mule-mmc-rest-plugin</artifactId>
+	      <version>${mulemmcrestPluginVersion}</version>
               <configuration>
 		<name>${project.artifactId}</name>
 		<version>${project.version}</version>
@@ -162,13 +167,8 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.18.1</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.14</version>
+                <version>2.15</version>
                 <configuration>
 		  <configLocation>https://jenkins-dev.asu.edu/files/checkstyle-mule.xml</configLocation>
                 </configuration>
@@ -217,7 +217,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.1</version>
+                <version>2.10.3</version>
                 <configuration>
                 </configuration>
             </plugin>
@@ -317,7 +317,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.9</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
 
