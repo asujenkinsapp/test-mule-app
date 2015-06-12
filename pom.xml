@@ -25,8 +25,8 @@
         <eclipsePluginVersion>2.10</eclipsePluginVersion>
 	<mulemmcrestPluginVersion>1.2.3-SNAPSHOT</mulemmcrestPluginVersion>
         <vmtype>org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType</vmtype>
-        <jdkName>JavaSE-1.6</jdkName>
-        <jdk.version>1.6</jdk.version>
+        <jdkName>JavaSE-1.7</jdkName>
+        <jdk.version>1.7</jdk.version>
     </properties>
 
     <build>
