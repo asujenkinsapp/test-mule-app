@@ -8,7 +8,7 @@
     <artifactId>testmuleapp</artifactId>
     <packaging>mule</packaging>
     <name>Mule Testmuleapp Application</name>
-    <version>1.0.99-SNAPSHOT</version>
+    <version>${MAJOR_MINOR_VERSION}.120-SNAPSHOT</version>
     <description>Test Mule App</description>
     <url>https://jenkins.asu.edu</url>
 
