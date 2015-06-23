@@ -327,7 +327,7 @@
         <repository>
             <id>asu-repo</id>
             <name>ASU Repository</name>
-            <url>https://artifactory-dev.asu.edu/artifactory/repo</url>
+            <url>https://artifactory-sandbox.asu.edu/artifactory/repo</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -336,7 +336,7 @@
         <pluginRepository>
             <id>asu-plugin-repo</id>
             <name>ASU Repository</name>
-            <url>https://artifactory-dev.asu.edu/artifactory/repo</url>
+            <url>https://artifactory-sandbox.asu.edu/artifactory/repo</url>
             <layout>default</layout>
         </pluginRepository>
     </pluginRepositories>
