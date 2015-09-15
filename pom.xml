@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <mule.version>3.6.2</mule.version>
+        <mule.version>3.7.1</mule.version>
         <!-- Tools properties -->
         <eclipsePluginVersion>2.10</eclipsePluginVersion>
 	<mulemmcrestPluginVersion>1.2.3-SNAPSHOT</mulemmcrestPluginVersion>
